@@ -153,6 +153,10 @@ hr {
   }
 
   .login-bg {
-    background-color: hsla(0, 2%, 10%, 0.511);
+    background-color: hsla(0, 2%, 10%, 0.667);
+  }
+  
+  .input-btn{
+    width: 50%;
   }
 }
