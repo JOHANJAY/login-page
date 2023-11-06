@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+:root{
+  /* color */
+  --txtcolor: #c9c6c6;
+  --txtdecor: #00f;
+}
+
 body {
   background-image: url(./bgimg.jpg);
   background-repeat: no-repeat;
@@ -18,11 +24,11 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: last baseline;
+  align-items: baseline;
   border-bottom: 1px solid #fff;
   font-family: "Space Grotesk", sans-serif;
   padding: 5px;
-  color: #c9c6c6;
+  color: var(--txtcolor);
 }
 
 nav li {
@@ -41,7 +47,7 @@ nav h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #c9c6c6;
+  color: var(--txtcolor);
 }
 
 .login-container2 {
@@ -55,21 +61,16 @@ nav h1 {
   margin-bottom: 60px;
 }
 
-.login-pages a {
+.login-pages :any-link {
   text-decoration: none;
-  color: #c9c6c6;
+  color: var(--txtcolor);
 }
 
-.login-pages a:visited {
-  text-decoration: none;
-}
-
-.login-pages a:hover,
-.login-pages a:focus {
+.login-pages :is(a:hover, a:focus) {
   text-decoration: underline;
   text-decoration-thickness: 3px;
-
-  text-decoration-color: rgb(0, 0, 246);
+  text-underline-offset: 7px;
+  text-decoration-color: var(--txtdecor);
 }
 
 .login-form {
@@ -114,7 +115,7 @@ nav h1 {
   border: 1px;
   border-radius: 50px;
   background-color: rgb(6, 6, 82);
-  color: #c9c6c6;
+  color: var(--txtcolor);
 }
 
 hr {
@@ -125,16 +126,17 @@ hr {
   text-align: center;
 }
 
-.fgpassword a {
+.fgpassword :any-link {
   text-decoration: none;
-  color: #c9c6c6;
+  color: var(--color);
 }
 
-.fgpassword a:hover,
-.fgpassword a:focus {
+.fgpassword :is(a:hover, a:focus) {
   text-decoration: underline;
-  text-decoration-color: blue;
-  color: #c9c6c6;
+  text-decoration-color: var(--txtdecor);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+  color: var(--txtcolor);
 }
 
 /* media quarys */
